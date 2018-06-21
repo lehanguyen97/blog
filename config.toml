@@ -1,7 +1,7 @@
 baseURL = "https://lehanguyen97.github.io"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "MW Blog"
+title = "Hagun's Blog"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "even"

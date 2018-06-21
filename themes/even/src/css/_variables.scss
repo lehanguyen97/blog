@@ -14,7 +14,7 @@ $theme-color-map: (
   'Mint Green': #16982B #f5f5f5,
   'Hot Pink': #FF69B4 #f8f5f5,
   'Dark Violet': #9932CC #f5f4fa,
-  'Custom': #ed7117 #fefefe
+  'Custom': #ed7117 #ffffff
 );
 
 // Check theme color config.
@@ -152,8 +152,8 @@ $post-nav-font-size: 18px !default;
 // Width of the post toc.
 $post-toc-width: 200px !default;
 
-// Backgroud color of the post toc.
-$post-toc-backgroud: rgba($deputy-color, 0.6) !default;
+// Backgroud color of the post toc. Default alpha is 0.6
+$post-toc-backgroud: rgba($deputy-color, 1) !default;
 
 // Margin left of the post toc.
 $post-toc-margin-left: $global-body-width - 15px !default;
