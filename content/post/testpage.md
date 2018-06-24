@@ -6,7 +6,7 @@ draft: false
 keywords: ["Testing", "Hugo"]
 description: ""
 tags: ["Rant", "Markdown", "Mathjax", "Hugo"]
-categories: []
+categories: ["Uncategorized"]
 author: "Hagun"
 
 # You can also close(false) or open(true) something for this content.
@@ -25,47 +25,103 @@ mathjaxEnableAutoNumber: false
 
 # You unlisted posts you might want not want the header or footer to show
 hideHeaderAndFooter: false
-
-# You can enable or disable out-of-date content warning for individual post.
-# Comment this out to use the global config.
-#enableOutdatedInfoWarning: false
-
-flowchartDiagrams:
-  enable: false
-  options: ""
-
-sequenceDiagrams: 
-  enable: false
-  options: ""
-
 ---
 # Just a test page
-A long time since I've been looking for a solution for my blog.
-CMS is easy to use but it requires dedicated server and I didn't want that.
-So static page, here I come.
+It's been a long time since I've been looking for a solution for my blog.
+A CMS is easy to use but it requires dedicated server and I didn't want that.
+After searching for a while, I went with static page.
 
 It's a little steep learning curve for an electrical student, but the result is worth the effort.
 
 I just want to test some functions for my blog, so this post come first.
 
 # Markdown
-As Hugo uses Black Friday Markdown Parser, I want to check what can it do. I have a quick look at Black Friday's Github Repo, and I see there is Github-flavored Markdown.
+Hugo uses Black Friday Markdown Parser which support Github-flavored Markdown. For the test, I would like to test all the features of Github-flavored Markdown. I refered to [this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the markdown.
 
-For the test, I would like to test all the features of Github-flavored Markdown. I refered to [this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the markdown.
+After pasting the Markdown and see the result, everything is working perfectly. The only thing not working is the Header underline and triple or more "=". I have inspected the headers but there is no (underline) element. There is no Hugo's option with Black Friday for header underline, but it's okay, I don't think the underline is pretty, though.
 
-After pasting the Markdown and see the result, everything is working perfectly. The only thing not working is the Header underline (triple or more "=" and "-"). I have inspected the headers but there is no (underline) element. There is no Hugo's option with Black Friday for header underline, but it's okay, I don't want that (ugly) underline, though.
+## Test
+I leave some test for later convenience.
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Combined emphasis with **asterisks and _underscores_**.
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+===
+
+---
+
+1. First ordered list item
+2. Another item
+    * Unordered sub-list. 
+3. Actual numbers don't matter, just that it's a number
+    1. Ordered sub-list (4 spaces)
+        - 4 spaces again
+4. And another item.
+
+    You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+    To have a line break without a paragraph, you will need to use two trailing spaces.  
+    Note that this line is separate, but within the same paragraph.  
+    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+Inline `code` has `back-ticks` around it.
+
+```javascript
+Even.backToTop = function () {
+  const $backToTop = $('#back-to-top')
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+      $backToTop.fadeIn(1000)
+    } else {
+      $backToTop.fadeOut(1000)
+    }
+  })
+
+  $backToTop.click(function () {
+    $('body,html').animate({ scrollTop: 0 })
+  })
+}
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
 
 # Mathjax
 Hugo suggests that Latex's underscores may cause Markdown confuse. But after testing some simple case, I didn't find anything wrong with my pages.
 
+Test underscores `x_1=x_2`: $x_1=x_2$
+
 Mathblock:
-$$x+y$$
+$$\lim_{x\to 0}x = 0$$
 
-Inline: $x_1-y=f(x^2)$
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
 
-Something more complex: $$\underset{x}{argmax}f(x) = \frac{x_1+x_2+...+x_n}{y}$$
+Use argmax without declare: `\underset{x}{\operatorname{arg\,max}}`
+$$\underset{x}{\operatorname{arg\,max}} x+1 = \infty$$
+Declare argmin: `\DeclareMathOperator*{\argmin}{arg\,min}`
 
-I didn't use much more complex case so maybe it's good enough.
+$$\DeclareMathOperator*{\argmin}{arg\,min}$$
+
+$$\argmin_{x}x^2 = 0$$
+
+Something more complex:
+$$f\left(\argmin_xf(x)\right) = \min_xf(x)$$
+
+I wouldn't use more complex case much, so maybe it's good enough.
 
 # Conclusion
 The theme (Even) is working perfect, Hugo is working perfect, Markdown, Mathjax is flawless.

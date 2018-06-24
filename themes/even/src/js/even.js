@@ -7,9 +7,9 @@ Even.backToTop = function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
-      $backToTop.fadeIn(1000)
+      $backToTop.fadeIn(250)
     } else {
-      $backToTop.fadeOut(1000)
+      $backToTop.fadeOut(250)
     }
   })
 
@@ -28,6 +28,12 @@ Even.mobileNavbar = function () {
     'tolerance': 70
   })
   slideout.disableTouch()
+
+  window.addEventListener('resize', () => {
+    if ($mobileNav.css('display') === 'none' && slideout.isOpen()) {
+      slideout.close();
+    }
+  })
 
   $mobileNavIcon.click(function () {
     slideout.toggle()
@@ -202,44 +208,6 @@ Even._linkToc = function () {
       const header = headers[i]
       header.innerHTML = `<a href="#${header.id}" class="headerlink"></a>${header.innerHTML}`
     }
-  }
-}
-
-Even.flowchart = function () {
-  if (!window.flowchart) return
-
-  const blocks = document.querySelectorAll('pre code.language-flowchart')
-  for (let i = 0; i < blocks.length; i++) {
-    const block = blocks[i]
-    const rootElement = block.parentElement
-
-    const container = document.createElement('div')
-    const id = `js-flowchart-diagrams-${i}`
-    container.id = id
-    container.className = 'align-center'
-    rootElement.parentElement.replaceChild(container, rootElement)
-
-    const diagram = flowchart.parse(block.childNodes[0].nodeValue)
-    diagram.drawSVG(id, window.flowchartDiagramsOptions ? window.flowchartDiagramsOptions : {})
-  }
-}
-
-Even.sequence = function () {
-  if (!window.Diagram) return
-
-  const blocks = document.querySelectorAll('pre code.language-sequence')
-  for (let i = 0; i < blocks.length; i++) {
-    const block = blocks[i]
-    const rootElement = block.parentElement
-
-    const container = document.createElement('div')
-    const id = `js-sequence-diagrams-${i}`
-    container.id = id
-    container.className = 'align-center'
-    rootElement.parentElement.replaceChild(container, rootElement)
-
-    const diagram = Diagram.parse(block.childNodes[0].nodeValue)
-    diagram.drawSVG(id, window.sequenceDiagramsOptions ? window.sequenceDiagramsOptions : {theme: 'simple'})
   }
 }
 

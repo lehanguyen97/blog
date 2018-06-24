@@ -71,62 +71,63 @@ figure.highlight {
     border-collapse: collapse;
   }
 
-  .code {
+  .code {    
+    color: $code-color;
     .hljs-comment,
     .hljs-quote {
       color: map-get($code-highlight-color, comment);
+      font-style: italic;
     }
-
+    
+    .hljs-doctag,
     .hljs-keyword,
-    .hljs-selector-tag,
-    .hljs-addition {
+    .hljs-formula {
       color: map-get($code-highlight-color, keyword);
     }
-
-    .hljs-number,
-    .hljs-string,
-    .hljs-meta .hljs-meta-string,
-    .hljs-literal,
-    .hljs-doctag,
-    .hljs-regexp {
-      color: map-get($code-highlight-color, number);
-    }
-
-    .hljs-title,
+    
     .hljs-section,
     .hljs-name,
-    .hljs-selector-id,
-    .hljs-selector-class {
-      color: map-get($code-highlight-color, title);
+    .hljs-selector-tag,
+    .hljs-deletion,
+    .hljs-subst {
+      color: map-get($code-highlight-color, section);
     }
-
+    
+    .hljs-literal {
+      color: map-get($code-highlight-color, literal);
+    }
+    
+    .hljs-string,
+    .hljs-regexp,
+    .hljs-addition,
     .hljs-attribute,
+    .hljs-meta-string {
+      color: map-get($code-highlight-color, string);
+    }
+    
+    .hljs-built_in,
+    .hljs-class .hljs-title {
+      color: map-get($code-highlight-color, built_in);
+    }
+    
     .hljs-attr,
     .hljs-variable,
     .hljs-template-variable,
-    .hljs-class .hljs-title,
-    .hljs-type {
-      color: map-get($code-highlight-color, attribute);
-    }
-
-    .hljs-symbol,
-    .hljs-bullet,
-    .hljs-subst,
-    .hljs-meta,
-    .hljs-meta .hljs-keyword,
+    .hljs-type,
+    .hljs-selector-class,
     .hljs-selector-attr,
     .hljs-selector-pseudo,
-    .hljs-link {
+    .hljs-number {
+      color: map-get($code-highlight-color, number);
+    }
+    
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link,
+    .hljs-meta,
+    .hljs-selector-id,
+    .hljs-title {
       color: map-get($code-highlight-color, symbol);
-    }
-
-    .hljs-built_in,
-    .hljs-deletion {
-      color: map-get($code-highlight-color, built_in);
-    }
-
-    .hljs-formula {
-      background: map-get($code-highlight-color, formula);
     }
     
     .hljs-emphasis {
@@ -135,6 +136,10 @@ figure.highlight {
     
     .hljs-strong {
       font-weight: bold;
+    }
+    
+    .hljs-link {
+      text-decoration: underline;
     }
   }
 }

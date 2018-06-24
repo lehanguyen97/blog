@@ -200,12 +200,12 @@ $code-font-family: Consolas, Monaco, Menlo, Consolas, monospace !default;
 $code-highlight-color: (
   comment: #5c6370,
   keyword: #c678dd,
+  section: #e06c75,
+  literal: #56b6c2,
+  string: #98c379,
   number: #d19a66,
-  title: #61aeee,
-  attribute: #98c379,
   symbol: #61aeee,
   built_in: #e6c07b,
-  formula: #eee8d5
 ) !default;
 
 // Code type list.
@@ -254,7 +254,7 @@ $code-type-list: (
 ) !default;
 
 // Color of the code background.
-$code-background: $deputy-color !default;
+$code-background: #282c34 !default;
 
 
 // ========== Pagination ========== //
