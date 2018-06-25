@@ -9,7 +9,7 @@ tags: ["Rant", "Hugo", "Even", "Github Pages"]
 categories: ["Experience"]
 author: "Hagun"
 
-comment: false
+comment: true
 toc: true
 autoCollapseToc: false
 postMetaInFooter: false
@@ -74,7 +74,8 @@ I went with [Heroku](https://www.heroku.com/) after found some guide to hosting 
 But the bad news comes when I start working with database.
 The only free database work without credit-card verification is Postgres which support has been drop by Ghost.
 
-Heroku also has sleep time and some limit which I don't like too. But I'm not blaming them for such a great free service.
+Heroku also has sleep time and some limit which I don't like too.
+But I'm not blaming them for such a great free service.
 
 Well, it's not easy to get some free-service without identity.
 
@@ -85,12 +86,14 @@ I would write some Markdown file with VS Code and lets my head not being filled 
 And here comes a comment which suggests host Static Site on Github for free.
 I've seen some Github Pages (site ends with **github.io**) without knowing about it.
 
-Github Pages provides a free github.io domain and HTTPS for custom domain.
+Static Site is a bunch of pages which don't asks server for anything but the data it've been stored.
+Perfectly fine with me as long as I have something to keep my post organized (which I use Hugo for).
 
+Github Pages provides a free github.io domain and HTTPS for custom domain.
 I considered Gitlab for free privated repo but, it's not important.
 
 ## Choosing Static Site Generator
-Github offers to build static site with [Jekyll](https://jekyllrb.com/), the most used static site generator (*SSG*).
+Github offers to build static site with [Jekyll](https://jekyllrb.com/), the most used Static Site Generator (*SSG*).
 It's come with a lot of great built-in theme, plugin due to its large user base. I just have to clone then build with Jekyll on my PC.
 
 But I don't like installing Ruby (>100MB) and get a slow building speed.
@@ -113,12 +116,11 @@ I've found lots of good theme in it like [Tranquilpeak](https://github.com/kakaw
 
 Currently, I use [Even](https://github.com/olOwOlo/hugo-theme-even), which has the tags and categories I need, besides good Highlight, Table of Content, MathJax,... and responsive design.
 
-To changed some setting, I spent some free day, worked through the docs, reading source code. 
-Sometimes, it's boring and frustrating. 
+To changed some setting, I spent some free day, worked through the docs, reading source code.
+Sometimes, it's boring and frustrating.
 But in the end, I learned a lot about new JS, SCSS, TOML, YAML, timeago.js, slideout.js, how to manage project file,...
 
 Maybe I'll write something about my work with this theme if I change some more (currently it's only a little change compare to LOC of the original code).
-
 
 # Thanks
 Now, those web knowledge may not be helpful for me.

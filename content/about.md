@@ -9,8 +9,6 @@ tags: []
 categories: []
 author: ""
 
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
 comment: false
 toc: false
 autoCollapseToc: false
@@ -25,22 +23,11 @@ mathjaxEnableAutoNumber: false
 
 # You unlisted posts you might want not want the header or footer to show
 hideHeaderAndFooter: false
-
-# You can enable or disable out-of-date content warning for individual post.
-# Comment this out to use the global config.
-#enableOutdatedInfoWarning: false
-
-flowchartDiagrams:
-  enable: false
-  options: ""
-
-sequenceDiagrams: 
-  enable: false
-  options: ""
-
 ---
 I'm a student of FETEL HCMUS. This site is just a place where I can sumarize my experience.
+The main subject of this blog besides my rant will be about electronic, coding and neural network.
+Hopefully I'll have the motivation for this.
 
-I'm using [Hugo](https://gohugo.io) to generate this site. My page's theme is [Even](https://github.com/olOwOlo/hugo-theme-even).
+About the site: I'm using [Hugo](https://gohugo.io) to generate this site, my page's theme is [Even](https://github.com/olOwOlo/hugo-theme-even).
 
 Many thanks to Github, Hugo, and olOwOlo (Even theme dev) for making this blog come to life.
